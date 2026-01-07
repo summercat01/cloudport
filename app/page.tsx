@@ -55,7 +55,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.25),transparent_35%)]" />
           <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 text-center">
             <p className="text-emerald-300 text-sm font-semibold uppercase tracking-[0.2em]">
-              LLM 기반 스마트 포트 스케줄링
+              LLM 기반 지능형 항만 관리 시스템
             </p>
             <h1 className="text-4xl font-bold leading-tight md:text-5xl">
               항만의 모든 변수를 예측하다,
