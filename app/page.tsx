@@ -23,12 +23,12 @@ export default function Home() {
             </span>
             <span>CloudPort</span>
           </a>
-          <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
+          <nav className="hidden items-center gap-10 text-sm font-medium md:flex">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className="text-slate-200 hover:text-white transition-colors"
+                className="text-emerald-300 hover:text-white transition-transform transition-colors duration-200 hover:scale-105"
               >
                 {item.label}
               </a>
@@ -39,7 +39,7 @@ export default function Home() {
               href="#contact"
               className="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400 transition-colors"
             >
-              도입 문의
+              Contact
             </a>
           </div>
         </div>
@@ -66,30 +66,50 @@ export default function Home() {
               AIS·VTS·Port-MIS와 비정형 텍스트를 통합 분석해 도선·예선 배정을 자동화하고,
               운영 효율을 59%까지 단축한 검증된 플랫폼입니다.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <a
-                href="#contact"
-                className="rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-400 transition-colors"
-              >
-                솔루션 도입 문의
-          </a>
-          <a
-                href="#contact"
-                className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-emerald-400 hover:text-emerald-200 transition-colors"
-              >
-                브로슈어 다운로드
-              </a>
+            <div className="grid w-full max-w-3xl gap-4 md:grid-cols-3">
+              {[
+                {
+                  title: "신뢰성 96%",
+                  desc: "여수·광양항 실증 배정 신뢰도",
+                },
+                {
+                  title: "59% 단축",
+                  desc: "업무 프로세스 시간 절감",
+                },
+                {
+                  title: "AI 검증 적합",
+                  desc: "공인기관 AI 신뢰성 판정",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-left shadow-lg backdrop-blur"
+                >
+                  <div className="text-sm text-emerald-300">{item.desc}</div>
+                  <div className="mt-1 text-2xl font-bold">{item.title}</div>
+                </div>
+              ))}
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-slate-300/90">
-              <span className="rounded-full border border-white/10 px-3 py-1">
-                AI 신뢰성 검증 적합
-              </span>
-              <span className="rounded-full border border-white/10 px-3 py-1">
-                여수·광양항 실증 96% 신뢰도
-              </span>
-              <span className="rounded-full border border-white/10 px-3 py-1">
-                업무 시간 59% 단축
-              </span>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="#background"
+                className="flex h-12 w-12 items-center justify-center rounded-full border border-emerald-400/40 bg-emerald-400/10 shadow-[0_0_30px_rgba(16,185,129,0.25)] animate-bounce transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-300/70"
+                aria-label="배경 섹션으로 이동"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-6 w-6 text-emerald-300"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 5v14" />
+                  <path d="M19 12l-7 7-7-7" />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
@@ -227,7 +247,9 @@ export default function Home() {
                   key={item.title}
                   className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg"
                 >
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-semibold text-emerald-300">
+                    {item.title}
+                  </h3>
                   <p className="mt-2 text-slate-200/90">{item.desc}</p>
                 </div>
               ))}
@@ -321,6 +343,20 @@ export default function Home() {
             <h2 className="mt-2 text-3xl font-bold leading-tight">
               여수·광양항 실증에서 글로벌 확장까지
             </h2>
+            <p className="mt-3 max-w-3xl text-slate-300">
+              검증된 레퍼런스를 간결하게 보여주고, 해외 전시·MOU로 확장성을 확인했습니다.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-sm text-emerald-200">
+              <span className="rounded-full border border-emerald-300/40 bg-emerald-300/5 px-3 py-1">
+                신뢰도 96%
+              </span>
+              <span className="rounded-full border border-emerald-300/40 bg-emerald-300/5 px-3 py-1">
+                시간 59% 단축
+              </span>
+              <span className="rounded-full border border-emerald-300/40 bg-emerald-300/5 px-3 py-1">
+                데이터 2.1억건+
+              </span>
+            </div>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
                 {
