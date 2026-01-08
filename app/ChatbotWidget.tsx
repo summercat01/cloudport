@@ -57,7 +57,7 @@ export function ChatbotWidget() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<
     Array<{ role: "user" | "assistant"; content: string }>
-  >([{ role: "assistant", content: "문서 기반으로 답변해드릴게요. 질문을 입력하세요. 초기 로딩이 오래 걸립니다." }]);
+  >([{ role: "assistant", content: "초기 로딩이 오래 걸립니다. 성능이 낮을 수 있습니다." }]);
 
   const bottomRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => bottomRef.current?.scrollIntoView({ behavior: "smooth" }), [messages]);
