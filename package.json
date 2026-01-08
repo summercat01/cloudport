@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:chunks": "node scripts/build-chunks.mjs"
   },
   "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.79",
     "next": "16.1.1",
+    "pdf-parse": "^1.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

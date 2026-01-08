@@ -1,5 +1,7 @@
 "use client";
 
+import { ChatbotWidget } from "./ChatbotWidget";
+
 const navItems = [
   { id: "background", label: "Background" },
   { id: "solution", label: "Solution" },
@@ -500,6 +502,8 @@ export default function Home() {
           </div>
         </footer>
       </main>
+
+      <ChatbotWidget />
     </div>
   );
 }
