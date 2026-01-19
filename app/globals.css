@@ -32,7 +32,7 @@ body {
 
 main {
   scrollbar-width: thin;
-  scrollbar-color: #22c55e33 #0f172a;
+  scrollbar-color: #3b82f633 #0f172a;
 }
 
 main::-webkit-scrollbar {
@@ -44,6 +44,29 @@ main::-webkit-scrollbar-track {
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #22c55e55;
+  background: #3b82f655;
   border-radius: 999px;
+}
+
+/* === Section reveal variants (premium, no blur) === */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(var(--reveal-x, 0px), var(--reveal-y, 16px), 0)
+    scale(var(--reveal-s, 1));
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0) scale(1);
 }

@@ -191,7 +191,7 @@ export function ChatbotWidget() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-emerald-400 via-teal-400 to-cyan-500 px-5 py-3 text-sm font-extrabold text-slate-950 shadow-[0_0_40px_rgba(16,185,129,0.45)] ring-1 ring-emerald-200/40 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-200/70 active:scale-100"
+        className="fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 px-5 py-3 text-sm font-extrabold text-slate-950 shadow-[0_0_40px_rgba(59,130,246,0.45)] ring-1 ring-sky-200/40 transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-200/70 active:scale-100"
         aria-label="문서 기반 챗봇 열기"
       >
         <span
@@ -247,7 +247,7 @@ export function ChatbotWidget() {
           <div key={i} className={`mb-3 ${m.role === "user" ? "text-right" : "text-left"}`}>
             <div
               className={`inline-block max-w-[90%] whitespace-pre-wrap rounded-2xl px-3 py-2 text-sm ${
-                m.role === "user" ? "bg-emerald-500 text-slate-950" : "bg-white/10 text-slate-100"
+                m.role === "user" ? "bg-blue-500 text-slate-950" : "bg-white/10 text-slate-100"
               }`}
             >
               {m.content}
@@ -265,13 +265,13 @@ export function ChatbotWidget() {
             onKeyDown={(e) => {
               if (e.key === "Enter") onSend();
             }}
-            className="flex-1 rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none focus:border-emerald-400"
+            className="flex-1 rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-sm outline-none focus:border-sky-400"
             placeholder="질문을 입력하세요"
           />
           <button
             onClick={onSend}
             disabled={!canSend}
-            className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-slate-950 disabled:opacity-50"
+            className="rounded-xl bg-blue-500 px-4 py-2 text-sm font-semibold text-slate-950 disabled:opacity-50"
           >
             전송
           </button>
