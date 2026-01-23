@@ -927,7 +927,7 @@ export default function Home() {
                   <span>이름/담당자</span>
                   <input
                     className="w-full rounded-lg border border-white/10 bg-slate-900 px-3 py-2 text-sm focus:border-sky-400 focus:outline-none"
-                    placeholder="고재우"
+                    placeholder="홍길동"
                   />
                 </label>
                 <label className="text-sm space-y-1">
