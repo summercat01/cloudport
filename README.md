@@ -8,7 +8,7 @@
 - AI/LLM (in-browser): @mlc-ai/web-llm
 - PDF processing: pdf-parse
 
-실행 방법
+## 실행 방법
 
 1. npm install
 
